@@ -20,3 +20,14 @@ const normalizeData = (value) => {
         return value
     }
 }
+
+const normalizeDataKey = (key) => {
+    return key.replace(/[A-Z]/g, chr => `-${chr.toLowerCase()}`)
+}
+
+const Manipulator = {
+    setDataAttribute: (elem, key, value) => {
+        return key.setAttribute(`data-cl-${normalizeDataKey(key)}`)
+    },
+    
+}
