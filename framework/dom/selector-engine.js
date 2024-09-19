@@ -79,10 +79,9 @@ const SelectorEngine = {
         return selector ? SelectorEngine.find(selector) : null
     },
 
-    getMutiElemsFromSel: (elem) => {
-        const selector = getSelector(elem)
-        return selector ? SelectorEngine.find(selector) : []
-    }
 }
 
-export default SelectorEngine;
+const getMutiElemsFromSel = (elem) => {
+    const selector = getSelector(elem)
+    return selector ? find(selector) : []
+}
